@@ -6,4 +6,4 @@ function Footer() {
         </footer>
     );
 }
-export  {footer};
+export  {Footer};
