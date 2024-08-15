@@ -6,4 +6,4 @@ function MainContent() {
         </main>
     );
 }
-export {MainContent};
+export default MainContent;

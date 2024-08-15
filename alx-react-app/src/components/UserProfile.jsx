@@ -7,4 +7,4 @@ const UserProfile = (props) => {
         </div>
     );
 };
-export {UserProfile};
+export default UserProfile;
