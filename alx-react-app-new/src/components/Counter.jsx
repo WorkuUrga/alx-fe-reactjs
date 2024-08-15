@@ -3,10 +3,10 @@ import { useState } from 'react'
 
 function Counter () {
     const [count, setCount] = useState(0)
-    const Increament = ()=>{
+    const Increment = ()=>{
         setCount(count + 1)
     }
-    const Decreament = ()=> {
+    const Decrement = ()=> {
         setCount(count - 1)
     }
     const Reset = ()=> {
@@ -15,8 +15,8 @@ function Counter () {
     return(
         <div style={{textAlign: 'center'}}>
             <p style={{fontSize: '20px', fontWeight: 'bold'}}>Current Count: {count}</p>
-            <button onClick={Increament} style={{margin: '5px', backgroundColor: 'blue', color: 'white', padding: '10px', width: '150px', border: 'none', borderRadius: '20px', fontSize: '20px'}}>Increament</button>
-            <button onClick={Decreament} style={{margin: '5px', backgroundColor: 'blue', color: 'white', padding: '10px', width: '150px', border: 'none', borderRadius: '20px', fontSize: '20px'}}>Decreament</button>
+            <button onClick={Increment} style={{margin: '5px', backgroundColor: 'blue', color: 'white', padding: '10px', width: '150px', border: 'none', borderRadius: '20px', fontSize: '20px'}}>Increment</button>
+            <button onClick={Decrement} style={{margin: '5px', backgroundColor: 'blue', color: 'white', padding: '10px', width: '150px', border: 'none', borderRadius: '20px', fontSize: '20px'}}>Decrement</button>
             <button onClick={Reset} style={{margin: '5px', backgroundColor: 'blue', color: 'white', padding: '10px', width: '150px', border: 'none', borderRadius: '20px', fontSize: '20px'}}>Reset</button>
         </div>
     )
