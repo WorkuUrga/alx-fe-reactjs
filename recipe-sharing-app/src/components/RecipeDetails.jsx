@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import useRecipeStore from './recipeStore';
 import EditRecipeForm from './EditRecipeForm';
 import DeleteRecipeButton from './DeleteRecipeButton';
@@ -6,9 +7,6 @@ import DeleteRecipeButton from './DeleteRecipeButton';
 function RecipeDetails({ recipeId }) {
     const recipe = useRecipeStore(state => state.recipes.find(recipe => recipe.id === recipeId));
 
-    if (!recipe) {
-        return <div>Recipe not found</div>;
-    }
 
     return (
         <div>
