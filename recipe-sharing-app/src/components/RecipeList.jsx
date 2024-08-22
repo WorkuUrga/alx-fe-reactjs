@@ -1,25 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import useRecipeStore from './recipeStore';
 
 function RecipeList() {
-    const { recipes, filteredRecipes, searchTerm, setSearchTerm, filterRecipes } = useRecipeStore();
-
-    useEffect(() => {
-        filterRecipes();
-    }, [searchTerm, recipes]); 
-    const recipesToDisplay = searchTerm ? filteredRecipes : recipes;
+    const recipes = useRecipeStore(state => state.recipes);
 
     return (
         <div>
-            <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search recipes..."
-            />
-            {recipesToDisplay.map(recipe => (
+            {recipes.map(recipe => (
                 <div key={recipe.id}>
-                    <h3>{recipe.title}</h3>
+                    <h3>
+                        <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
+                    </h3>
                     <p>{recipe.description}</p>
                 </div>
             ))}
