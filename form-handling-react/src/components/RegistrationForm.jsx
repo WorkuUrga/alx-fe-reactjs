@@ -2,9 +2,11 @@ import React from 'react'
 import {useState} from 'react'
 
 function RegistrationForm() {
-    [username, setUsername] = useState('');
-    [email, setEmail] = useState('');
-    [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const[errors, setErrors] =useState({})
 
     const handleUsernameChange = (e)=> {
         setUsername(e.target.value);
@@ -17,16 +19,11 @@ function RegistrationForm() {
     }
     const handleSubmit = (e)=> {
         e.preventDefault();
+        const newErrors ={}
         
-        if(!username) {
-            alert('Please fill in all fields')         
-        } 
-        if(!email) {
-            alert('Please fill in all fields')
-        } 
-        if(!password) {
-            alert('Please fill in all fields')
-        }
+        if(!username) newErrors.username = 'username is required'
+        if(!email) newErrors.email = 'Email is required';
+        if(!password) newErrors.password = 'Password is required'
     }
 
     return (
