@@ -18,7 +18,7 @@ function RegistrationForm() {
     const handleSubmit = (e)=> {
         e.preventDefault();
         
-        if(username === '' || email === '' || password === '') {
+        if(!username || !email || !password) {
             alert('Please fill in all fields')
         }
     }
