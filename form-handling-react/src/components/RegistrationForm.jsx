@@ -42,7 +42,7 @@ function RegistrationForm() {
         <input 
             type="password"
             name="password"
-            value={oassword}
+            value={password}
             onChange={handlePasswordChange}
             placeholder='Password'
         />
