@@ -11,24 +11,25 @@ const validationSchema = Yup.object({
 });
 
 function formikForm() {
-  return;
-  <Formik
-    inivialValues={{ name: "", email: "", password: "" }}
-    validateSchema={validationSchema}
-    onSubmit={(values) => {
-      console.log(values);
-    }}
-  >
-    {() => (
-      <Form>
-        <Field type="text" name="name" />
-        <Field type="email" name="email" />
-        <Field type="password" name="password" />
-        <ErrorMessage name="email" component="div" />
-        <button type="submit">Submit</button>
-      </Form>
-    )}
-  </Formik>;
+  return (
+    <Formik
+      inivialValues={{ name: "", email: "", password: "" }}
+      validateSchema={validationSchema}
+      onSubmit={(values) => {
+        console.log(values);
+      }}
+    >
+      {() => (
+        <Form>
+          <Field type="text" name="name" />
+          <Field type="email" name="email" />
+          <Field type="password" name="password" />
+          <ErrorMessage name="email" component="div" />
+          <button type="submit">Submit</button>
+        </Form>
+      )}
+    </Formik>
+  );
 }
 
 export default formikForm;
