@@ -19,13 +19,19 @@ function RegistrationForm() {
     }
     const handleSubmit = (e)=> {
         e.preventDefault();
-        const newErrors ={}
         
-        if(!username) newErrors.username = 'username is required'
-        if(!email) newErrors.email = 'Email is required';
-        if(!password) newErrors.password = 'Password is required'
-
-        setErrors(newErrors)
+        if (!username) {
+            setErrors('Username Required!');
+            return;
+        }  
+        if (!email) {
+            setErrors('Email Required!');
+            return;
+        }
+        if (!password) {
+            setErrors('Passwor Required!');
+            return;
+        }        
     }
 
     return (
