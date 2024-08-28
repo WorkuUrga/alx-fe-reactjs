@@ -13,7 +13,7 @@ const validationSchema = Yup.object({
 function formikForm() {
   return (
     <Formik
-      inivialValues={{ name: "", email: "", password: "" }}
+      initialValues={{ name: "", email: "", password: "" }}
       validateSchema={validationSchema}
       onSubmit={(values) => {
         console.log(values);
