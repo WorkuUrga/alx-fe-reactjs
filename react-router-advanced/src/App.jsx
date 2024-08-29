@@ -9,9 +9,9 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element= {<Home />}/>
-        
+
         <Route element={<ProtectedRoute />}>
-          <Route path='/Profile' element= {<Profile />}/>
+          <Route path='/profile' element= {<Profile />}/>
         </Route>
         <Route path="/blog/:id" element = {<BlogPost />} />
       </Routes>
