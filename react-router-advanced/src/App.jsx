@@ -8,8 +8,10 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path='/' element= {<Home />}/>
+        
         <Route element={<ProtectedRoute />}>
-          <Route path='/' element= {<Profile />}/>
+          <Route path='/Profile' element= {<Profile />}/>
         </Route>
         <Route path="/blog/:id" element = {<BlogPost />} />
       </Routes>
