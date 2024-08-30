@@ -1,10 +1,11 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import TodoList from "../components/TodoList";
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
+
+const mockedAdd = jest.fn();
 
 test("renders TodoList component with initial tasks", () => {
-  render(<TodoList />);
+  render(<TodoList add={mockedAdd} />);
   expect(screen.getByText("Learn React")).toBeInTheDocument();
   expect(screen.getByText("Learn Testing")).toBeInTheDocument();
   expect(screen.getByText("Build a Todo App")).toBeInTheDocument();
@@ -12,7 +13,7 @@ test("renders TodoList component with initial tasks", () => {
 });
 
 test("adds a new todo", () => {
-  render(<TodoList />);
+  render(<TodoList add={mockedAdd} />);
   const input = screen.getByRole("textbox");
   fireEvent.change(input, { target: { value: "New Task" } });
   fireEvent.click(screen.getByText("Add"));
@@ -20,7 +21,7 @@ test("adds a new todo", () => {
 });
 
 test("toggles a todo completed state", () => {
-  render(<TodoList />);
+  render(<TodoList add={mockedAdd} />);
   const task = screen.getByText("Learn React");
   fireEvent.click(screen.getByRole("checkbox", { name: /Learn React/i }));
   expect(task).toHaveStyle("text-decoration: line-through");
@@ -29,7 +30,7 @@ test("toggles a todo completed state", () => {
 });
 
 test("deletes a todo", () => {
-  render(<TodoList />);
+  render(<TodoList add={mockedAdd} />);
   const deleteButton = screen.getAllByText("X")[0];
   fireEvent.click(deleteButton);
   expect(screen.queryByText("Learn React")).not.toBeInTheDocument();

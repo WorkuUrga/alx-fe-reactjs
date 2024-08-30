@@ -1,4 +1,3 @@
-// src/TodoItem.js
 import React from 'react';
 
 function TodoItem({ task, deleteTask, toggleTask }) {
