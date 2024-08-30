@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import TodoList from "../TodoList";
-
+import TodoList from "../components/TodoList";
 test("renders TodoList component with initial tasks", () => {
   render(<TodoList />);
   expect(screen.getByText("task 1")).toBeInTheDocument();
