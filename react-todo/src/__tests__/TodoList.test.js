@@ -1,66 +1,37 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom";
 import TodoList from "../components/TodoList";
+import { jest } from "@jest/globals";
 
-test("renders TodoList component with initial todos", () => {
+test("renders TodoList component with initial tasks", () => {
   render(<TodoList />);
-
-  // Check initial todos are present
   expect(screen.getByText("Learn React")).toBeInTheDocument();
+  expect(screen.getByText("Learn Testing")).toBeInTheDocument();
   expect(screen.getByText("Build a Todo App")).toBeInTheDocument();
-  expect(screen.getByText("Master JavaScript")).toBeInTheDocument();
+  expect(screen.getByText("Add")).toBeInTheDocument();
 });
 
-test("allows a user to add a new todo", () => {
+test("adds a new todo", () => {
   render(<TodoList />);
-
-  const inputElement = screen.getByPlaceholderText("Add a new todo");
-  const addButton = screen.getByText("Add Todo");
-
-  // Add a new todo
-  fireEvent.change(inputElement, { target: { value: "Write unit tests" } });
-  fireEvent.click(addButton);
-
-  // Verify the new todo is added
-  expect(screen.getByText("Write unit tests")).toBeInTheDocument();
+  const input = screen.getByRole("textbox");
+  fireEvent.change(input, { target: { value: "New Task" } });
+  fireEvent.click(screen.getByText("Add"));
+  expect(screen.getByText("New Task")).toBeInTheDocument();
 });
 
-test("allows a user to toggle a todo item between completed and not completed", () => {
+test("toggles a todo completed state", () => {
   render(<TodoList />);
-
-  // Assume that the first todo item is "Learn React"
-  const firstTodo = screen.getByText("Learn React");
-
-  // Verify initial state (not completed)
-  expect(firstTodo).not.toHaveClass("completed");
-
-  // Toggle completion status
-  fireEvent.click(firstTodo);
-
-  // Check if the todo is now marked as completed
-  expect(firstTodo).toHaveClass("completed");
-
-  // Toggle completion status back
-  fireEvent.click(firstTodo);
-
-  // Verify it's no longer marked as completed
-  expect(firstTodo).not.toHaveClass("completed");
+  const task = screen.getByText("Learn React");
+  fireEvent.click(screen.getByLabelText("Learn React")); // Assuming TodoItem uses label
+  expect(task).toHaveStyle("text-decoration: line-through");
+  fireEvent.click(screen.getByLabelText("Learn React")); // Toggle back
+  expect(task).not.toHaveStyle("text-decoration: line-through");
 });
 
-test("allows a user to delete a todo item", () => {
+test("deletes a todo", () => {
   render(<TodoList />);
-
-  // Assume that the first todo item is "Learn React"
-  const firstTodo = screen.getByText("Learn React");
-
-  // Verify initial presence of the todo item
-  expect(firstTodo).toBeInTheDocument();
-
-  // Simulate clicking the delete button
-  const deleteButton = screen.getByTestId("delete-button-1"); // ID of the first todo
+  const deleteButton = screen.getAllByText("X")[0]; // Assuming "X" is used for delete
   fireEvent.click(deleteButton);
-
-  // Verify that the todo item is removed from the document
-  expect(firstTodo).not.toBeInTheDocument();
+  expect(screen.queryByText("Learn React")).not.toBeInTheDocument();
 });
