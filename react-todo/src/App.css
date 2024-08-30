@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+  width: 220px;
+  align-items: center;
 }
 
 .todo-item p {

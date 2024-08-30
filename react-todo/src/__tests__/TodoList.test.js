@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom"; // Ensure jest-dom is imported
 import TodoList from "../components/TodoList";
 
 test("renders TodoList component with initial tasks", () => {
