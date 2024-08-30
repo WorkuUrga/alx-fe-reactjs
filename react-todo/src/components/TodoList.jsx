@@ -1,57 +1,52 @@
 import React, { useState } from 'react';
+import TodoItem from './TodoItem';
 
-const TodoList = () => {
-    const [todos, setTodos] = useState([
+function TodoList() {
+    const [tasks, setTasks] = useState([
         { id: 1, text: 'Learn React', completed: false },
         { id: 2, text: 'Learn Testing', completed: false },
-        { id: 3, text: 'Build a Todo App', completed: false }
+        { id: 3, text: 'Build a Todo App', completed: false },
     ]);
 
-    const [newTodo, setNewTodo] = useState('');
+    const [text, setText] = useState('');
 
-    const addTodo = () => {
-        if (newTodo.trim()) {
-            setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
-            setNewTodo('');
-        }
-    };
+    function addTask(text) {
+        const newTask = {
+            id: Date.now(),
+            text,
+            completed: false,
+        };
+        setTasks([...tasks, newTask]);
+        setText('');
+    }
 
-    const toggleTodo = (id) => {
-        setTodos(todos.map(todo =>
-            todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    function deleteTask(id) {
+        setTasks(tasks.filter(task => task.id !== id));
+    }
+
+    function toggleTask(id) {
+        setTasks(tasks.map(task => 
+            task.id === id ? { ...task, completed: !task.completed } : task
         ));
-    };
-
-    const deleteTodo = (id) => {
-        setTodos(todos.filter(todo => todo.id !== id));
-    };
+    }
 
     return (
         <div>
-            <h1>Todo List</h1>
+            {tasks.map(task => (
+                <TodoItem
+                    key={task.id}
+                    task={task}
+                    deleteTask={deleteTask}
+                    toggleTask={toggleTask}
+                />
+            ))}
             <input
-                type="text"
-                value={newTodo}
-                onChange={(e) => setNewTodo(e.target.value)}
+                value={text}
+                onChange={e => setText(e.target.value)}
             />
-            <button onClick={addTodo}>Add</button>
-            <ul>
-                {todos.map(todo => (
-                    <li key={todo.id}>
-                        <span
-                            onClick={() => toggleTodo(todo.id)}
-                            style={{
-                                textDecoration: todo.completed ? 'line-through' : 'none'
-                            }}
-                        >
-                            {todo.text}
-                        </span>
-                        <button onClick={() => deleteTodo(todo.id)}>X</button>
-                    </li>
-                ))}
-            </ul>
+            <button onClick={() => addTask(text)}>Add</button>
         </div>
     );
-};
+}
 
 export default TodoList;

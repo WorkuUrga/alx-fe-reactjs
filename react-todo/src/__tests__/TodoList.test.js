@@ -3,9 +3,11 @@ import TodoList from "../TodoList";
 
 test("renders TodoList component with initial tasks", () => {
   render(<TodoList />);
-  expect(screen.getByText("Learn React")).toBeInTheDocument();
-  expect(screen.getByText("Learn Testing")).toBeInTheDocument();
-  expect(screen.getByText("Build a Todo App")).toBeInTheDocument();
+  expect(screen.getByText("task 1")).toBeInTheDocument();
+  expect(screen.getByText("task 2")).toBeInTheDocument();
+  expect(screen.getByText("task 3")).toBeInTheDocument();
+  expect(screen.getByText("Add")).toBeInTheDocument();
+  expect(screen.getAllByText("X")[0]).toBeInTheDocument();
 });
 
 test("adds a new todo", () => {
@@ -18,14 +20,16 @@ test("adds a new todo", () => {
 
 test("toggles a todo completed state", () => {
   render(<TodoList />);
-  const task = screen.getByText("Learn React");
-  fireEvent.click(task);
+  const task = screen.getByText("task 1");
+  fireEvent.click(screen.getByLabelText("task 1"));
   expect(task).toHaveStyle("text-decoration: line-through");
+  fireEvent.click(screen.getByLabelText("task 1")); // Toggle back
+  expect(task).toHaveStyle("text-decoration: none");
 });
 
 test("deletes a todo", () => {
   render(<TodoList />);
   const deleteButton = screen.getAllByText("X")[0];
   fireEvent.click(deleteButton);
-  expect(screen.queryByText("Learn React")).not.toBeInTheDocument();
+  expect(screen.queryByText("task 1")).not.toBeInTheDocument();
 });

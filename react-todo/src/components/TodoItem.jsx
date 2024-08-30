@@ -1,20 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-function TodoItem({task, deleteTask, toggleTask}) {
+function TodoItem({ task, deleteTask, toggleTask }) {
     function handleChange() {
         toggleTask(task.id);
     }
-  return (
-    <div class="todo-item">
-        <input
-            type='checkbox'
-            checked = {task.completed}
-            onChange={handleChange}
-        />
-        <p>{task.text}</p>
-        <button onClick={()=> deleteTask(task.id)}>X</button>
-    </div>
-  )
+
+    return (
+        <div className="todo-item">
+            <input
+                type='checkbox'
+                checked={task.completed}
+                onChange={handleChange}
+                aria-label={task.text}  
+            />
+            <p style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+                {task.text}
+            </p>
+            <button onClick={() => deleteTask(task.id)}>X</button>
+        </div>
+    );
 }
 
-export default TodoItem
+export default TodoItem;
