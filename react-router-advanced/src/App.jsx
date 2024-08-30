@@ -9,7 +9,6 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element= {<Home />}/>
-
         <Route element={<ProtectedRoute />}>
           <Route path='/profile' element= {<Profile />}/>
         </Route>
