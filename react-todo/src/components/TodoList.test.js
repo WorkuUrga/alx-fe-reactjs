@@ -54,13 +54,11 @@ describe("TodoList Component", () => {
     });
     fireEvent.click(screen.getByText("Add Todo"));
 
-    // Attempt to add the same todo again
     fireEvent.change(screen.getByPlaceholderText("Add a new todo"), {
       target: { value: "Learn React" },
     });
     fireEvent.click(screen.getByText("Add Todo"));
 
-    // Verify the error message
     expect(screen.getByTestId("error-message")).toHaveTextContent(
       "Todo is a duplicate"
     );
