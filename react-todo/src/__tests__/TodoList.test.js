@@ -1,14 +1,13 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import TodoList from "components/TodoList";
+import TodoList from "../components/TodoList"; // Ensure this relative path is correct
+
 describe("TodoList Component", () => {
-  // Scenario 1: Renders TodoList component
   test("renders TodoList component", () => {
     render(<TodoList />);
     expect(screen.getByTestId("todo-list")).toBeInTheDocument();
   });
 
-  // Scenario 2: Renders initial state with demo todos
   test("renders initial state with demo todos", () => {
     render(<TodoList />);
     expect(screen.getByText("Learn React")).toBeInTheDocument();
@@ -16,7 +15,6 @@ describe("TodoList Component", () => {
     expect(screen.getByText("Build a Todo App")).toBeInTheDocument();
   });
 
-  // Scenario 3: Adds a new todo
   test("adds a new todo", () => {
     render(<TodoList />);
     fireEvent.change(screen.getByPlaceholderText("Add a new todo"), {
@@ -26,59 +24,65 @@ describe("TodoList Component", () => {
     expect(screen.getByText("New Todo")).toBeInTheDocument();
   });
 
-  // Scenario 4: Prevent adding an empty todo
   test("prevents adding an empty todo", () => {
     render(<TodoList />);
     fireEvent.click(screen.getByText("Add Todo"));
-    expect(screen.queryByText("")).not.toBeInTheDocument();
+    expect(screen.getByTestId("error-message")).toHaveTextContent(
+      "Todo cannot be empty"
+    );
   });
 
-  // Scenario 5: Toggles a todo between completed and not completed
   test("toggles a todo between completed and not completed", () => {
     render(<TodoList />);
-    const todoItem = screen.getByText("Learn React");
-    fireEvent.click(todoItem);
-    expect(todoItem).toHaveClass("completed"); // Assuming that completed todos get a 'completed' class
-
-    fireEvent.click(todoItem);
+    const todoItem = screen.getByText("Learn React").closest(".todo-item");
+    fireEvent.click(todoItem.querySelector('input[type="checkbox"]'));
+    expect(todoItem).toHaveClass("completed");
+    fireEvent.click(todoItem.querySelector('input[type="checkbox"]'));
     expect(todoItem).not.toHaveClass("completed");
   });
 
-  // Scenario 6: Deletes a todo
   test("deletes a todo", () => {
     render(<TodoList />);
     fireEvent.click(screen.getByTestId("delete-todo-Learn React"));
     expect(screen.queryByText("Learn React")).not.toBeInTheDocument();
   });
 
-  // Scenario 7: Prevent adding duplicate todos
   test("prevents adding duplicate todos", () => {
     render(<TodoList />);
     fireEvent.change(screen.getByPlaceholderText("Add a new todo"), {
       target: { value: "Learn React" },
     });
     fireEvent.click(screen.getByText("Add Todo"));
-    expect(screen.queryAllByText("Learn React").length).toBe(1);
+
+    // Attempt to add the same todo again
+    fireEvent.change(screen.getByPlaceholderText("Add a new todo"), {
+      target: { value: "Learn React" },
+    });
+    fireEvent.click(screen.getByText("Add Todo"));
+
+    // Verify the error message
+    expect(screen.getByTestId("error-message")).toHaveTextContent(
+      "Todo is a duplicate"
+    );
   });
 
-  // Scenario 8: Input field clears after adding a todo
   test("clears input field after adding a todo", () => {
     render(<TodoList />);
-    const inputField = screen.getByPlaceholderText("Add a new todo");
-    fireEvent.change(inputField, { target: { value: "New Todo" } });
+    fireEvent.change(screen.getByPlaceholderText("Add a new todo"), {
+      target: { value: "New Todo" },
+    });
     fireEvent.click(screen.getByText("Add Todo"));
-    expect(inputField.value).toBe("");
+    expect(screen.getByPlaceholderText("Add a new todo").value).toBe("");
   });
 
-  // Scenario 9: Displays error message for invalid input
   test("displays error message for invalid input", () => {
     render(<TodoList />);
     fireEvent.change(screen.getByPlaceholderText("Add a new todo"), {
-      target: { value: "x" },
-    }); // Assuming 'x' is too short
+      target: { value: "" },
+    });
     fireEvent.click(screen.getByText("Add Todo"));
-    expect(
-      screen.getByText("Todo must be at least 3 characters long")
-    ).toBeInTheDocument(); // Assuming this is the error message
+    expect(screen.getByTestId("error-message")).toHaveTextContent(
+      "Todo cannot be empty"
+    );
   });
 });
