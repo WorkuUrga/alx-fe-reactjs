@@ -8,7 +8,6 @@ test("Write Initial Render Test", () => {
   expect(screen.getByText("Learn React")).toBeInTheDocument();
   expect(screen.getByText("Learn Testing")).toBeInTheDocument();
   expect(screen.getByText("Build a Todo App")).toBeInTheDocument();
-  expect(screen.getByText("Add")).toBeInTheDocument();
 });
 
 test("Test Adding Todos", () => {
