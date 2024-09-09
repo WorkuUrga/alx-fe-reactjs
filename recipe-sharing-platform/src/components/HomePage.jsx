@@ -15,7 +15,7 @@ function HomePage() {
         {recipes.length > 0 ? (
             <div className='bg-gray-100 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
                 {recipes.map((recipe) => (
-                    <div key={recipe.id} className='bg-white rounded-lg p-4 transition-transform transform hover:scale-105 duration-300'>
+                    <div key={recipe.id} className='bg-white rounded-lg p-4 transition-transform transform hover:scale-105 duration-300 hover:shadow-md'>
                         <h2 className='text-md text-center pb-4'>{recipe.title}</h2>
                         <img src = {recipe.image} alt = {recipe.title} className='mr-auto ml-auto'/>
                         <p className='text-sm mt-2 text-gray-400'>{recipe.summary}</p>
