@@ -1,9 +1,10 @@
 import './App.css'
+import HomePage from './HomePage'
 
 function App() {
   return (
     <>
-      <p className="text-blue-500">Recipe Sharing Platform</p>
+      <HomePage />
     </>
   )
 }
