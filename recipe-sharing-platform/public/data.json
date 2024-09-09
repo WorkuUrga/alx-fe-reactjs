@@ -3,70 +3,95 @@
     "id": 1,
     "title": "Classic Margherita Pizza",
     "summary": "A simple pizza recipe with a rich tomato sauce, fresh mozzarella, and basil leaves.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/6G72QeN.jpeg",
+    "ingredients": ["Homemade Pizza Dough", "Tomatoes", "Garlic", "Extra-Virgin Olive Oil"],
+    "instructions": ["Place a pizza stone in the oven. Preheat the oven to 500 degrees F, allowing the stone to get hot.", "Shape the pizza dough on a floured surface into an 8-inch round, making it 1/4-inch thick. Transfer it to a pizza peel lined with parchment paper. Reshape if necessary.", "Gently brush the dough with the olive oil, then evenly spread the marinara sauce on, leaving a 1-inch border around the edge. Sprinkle the garlic over the top. Top with the mozzarella slices and tomatoes, leaving space in between.", "Slide the parchment with the crust onto the heated stone. Bake for 8-10 minutes until crust is golden and cheese is melted and bubbly", "Remove from oven and sprinkle the basil over the top, along with 1-2 grinds of fresh black pepper.", "Cut into wedges and serve immediately."]},
   {
     "id": 2,
     "title": "Avocado Toast",
     "summary": "A quick and healthy snack made with fresh avocado, olive oil, and topped with seeds.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/vrc0NHn.jpeg",  
+    "ingredients": ["Hash Brown Patties","Avocado", "Lemon Juice", "Sriracha", "Seasonings", "Eggs", "Salsa", "Cheese"],
+    "instructions":["Mash the avocado. Lightly mash the avocado until it’s smooth, but still has texture. Mix in the lemon juice, sriracha, and some salt and pepper, to taste.", "Air fry the hash browns. Place frozen hash brown patties in your air fryer basket, in a single layer, leaving space in between each patty. Air fry at 400F for 12 minutes, flipping halfway.", "Cook the eggs. Make your eggs any way you want. We love a fried egg or scrambled eggs on top of our avocado toast.","Assemble. Top each hash brown with some mashed avocado, a cooked egg, a turn or two of fresh cracked pepper, 2 tablespoons of salsa, and 1 tablespoon cheese. Serve immediately."]},
   {
     "id": 3,
     "title": "Chicken Caesar Salad",
     "summary": "A fresh and crunchy Caesar salad topped with grilled chicken and a creamy dressing.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/ZpzBzN2.jpeg",
+    "ingredients":["Pasta", "Chicken", "Lettuce", "Tomatoes", "Parmesan", "Dressing", "Croutons"],
+    "instructions":["Set a large pot of salted water to boil; cook the pasta al dente, according to package directions. Drain the pasta and rinse under cold water. Shake to get rid of any excess liquid.", "In the meantime, make the dressing. In a large serving bowl, whisk together all the ingredients for the dressing until well combined.", "Add pasta to the bowl with the dressing.", "Add the pieces of Romaine, tomatoes, chicken, and croutons to the pasta and toss to combine and make sure everything is coated.", "Garnish with fresh shaved Parmesan and serve right away!"]  },
   {
     "id": 4,
     "title": "Chocolate Brownies",
     "summary": "Fudgy chocolate brownies with a rich and dense texture, perfect for dessert.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/o5VcnB2.jpeg",
+    "ingredients":["All-purpose flour", "Unsweetened cocoa powder", "Granulated sugar", "Eggs", "Vegetable oil", "Coarse salt", "Mix-Ins"],
+    "instructions":["Make the batter. Whisk together the flour, cocoa powder, sugar, salt, eggs, and oil. Fold in the walnuts and some of the chocolate chips until combined.", "Prep the pan. Coat a 9×13 pan with nonstick cooking spray and pour the batter into it in an even layer. Sprinkle some chocolate chips over the top.", "Bake. Bake in a 350 degree preheated oven until a toothpick comes out almost clean, 20-25 minutes. (All ovens run differently. Don’t over-bake!)", "Cool and slice. Let cool completely. Cut into squares and enjoy!"]  },
   
   {
     "id": 5,
     "title": "Spaghetti Bolognese",
     "summary": "A traditional Italian dish with a savory meat sauce served over spaghetti.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/WoI7lWf.jpeg",
+    "ingredients":["Meat", "Vegetable", "Tomatoes", "Wine", "Milk", "Seasonings", "Parmesan cheese"],
+    "instructions":["In a 6-quart slow cooker, mix together all the ingredients (except the milk, Parmesan, and parsley.)", "Cover and cook on low for 8 hours until meat is cooked through and vegetables are tender.", "Remove cover and discard bay leaf.", "Stir in the milk until warmed through.", "Serve with your favorite pasta with a sprinkle of freshly grated Parmesan and chopped parsley.", "NOTE: for substitutions, additions, and stovetop cooking instructions, please refer to the full article."]  },
   
   {
     "id": 6,
     "title": "Vegetable Stir Fry",
     "summary": "A quick and healthy stir-fry with mixed vegetables, soy sauce, and sesame oil.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/liwRKZU.jpeg",
+    "ingredients":["Vegetable oil", "Vegetable", "Seasonings",
+    "Pineaples", "Vegetable stir fry sauce", "For serving", "Garnish"],
+    "instructions":["In a large nonstick pan, heat oil over medium-high.", "Add in the onion, bell pepper, carrots, and snap peas. Cook, stirring frequently, for about 3 minutes", "Toss in the ginger, garlic, curry powder, red pepper flakes, and salt and pepper to taste. Continue to cook for another 1-2 minutes until vegetables are crisp-tender.", "In a small bowl, whisk together the pineapple juice and cornstarch until dissolved. Add the mixture, along with the pineapple chunks and coconut milk to the pan. Cook for 1 minute or until thickened; stir gently.", "Spoon vegetables over cooked rice and serve right away."]  },
   
   {
     "id": 7,
     "title": "Pancakes with Maple Syrup",
     "summary": "Fluffy pancakes served with rich maple syrup, perfect for a hearty breakfast.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/oMUnA9u.jpeg",
+    "ingredients":["Butter", "Powdered sugar", "Mapple syrup",
+    "Pumpkin pie spice"],
+    "instructions":["Beat butter in a bowl with an electric mixer until light and fluffy.","Add in the remaining ingredients and beat until combined.","Scrape down the sides of the bowl with a spatula and continue whipping until perfectly soft and creamy.", "Spoon into a large ramekin or (2) 4 ounce glass jars; leave on the counter for up to 2 days or transfer to the refrigerator in an airtight container for longer storage (bring to room temperature before serving.)", "Use as desired. Also great for gifting in jars with a little ribbon."
+    ]},
 
   {
     "id": 8,
     "title": "Greek Salad",
     "summary": "A refreshing salad with tomatoes, cucumber, olives, feta cheese, and olive oil.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/jQWgOIh.jpeg",
+    "ingredients":["1/2 cup extra-virgin olive oil", "1/4 cup red wine vinegar", "1 tablespoon fresh lemon juice", "1/2 tablespoon honey", "3/4 teaspoon Dijon mustard", "2 cloves garlic , finely minced", "1 teaspoon dried oregano", "1/2 teaspoon salt", "1/4 teaspoon ground black pepper"],
+    "instructions":["Make the dressing: Place all ingredients into a jar with a tight-fitting lid. Shake vigorously until well-blended and emulsified. Taste and adjust seasonings, adding more salt and pepper if necessary.", "Cook pasta according to package directions, al dente. Drain and rinse under cold water.", "In the meantime, combine all other salad ingredients in a large bowl. Add cooked pasta.", "Drizzle the Greek dressing over the top and mix well until everything is coated."]  },
   
   {
     "id": 9,
     "title": "Lemon Drizzle Cake",
     "summary": "A light and zesty lemon cake with a sweet and tangy drizzle on top.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/HztwRta.jpeg",
+    "ingredients":["Angel Food Cake Mix", "Lemon Pie Filling","Lemon Juice and Zest", "Powered sugar (optional)"],
+    "instructions":["Combine ingredients. Mix all the ingredients together until incorporated and smooth", "Pour into baking dish.Pour batter into a greased 9×13 baking dish in an even layer.", "Bake & Cool. Bake at 350F For 30 minutes or until slightly golden and a tester comes out clean. Let cool completely."]   },
   
   {
     "id": 10,
     "title": "Tacos with Guacamole",
     "summary": "Soft tacos filled with seasoned beef, fresh guacamole, salsa, and cheese.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/tdR5ST5.jpeg",
+    "ingredients":["Vegetable oil", "Fresh lime juice", "Serrano Chile peppers", "Garlic", "Brown sugar", "Seasonings", "Skirt steak", "Salsa verde", "Mini corn street taco tortillas", "For serving"],
+    "instructions":["Make the marinade. Blend together the oil, lime juice, Chile peppers, garlic, brown sugar, and seasonings until smooth.", "Marinade the steak. Combine the steak and the marinade in a bag and toss to coat the meat. Seal the bag and chill in the fridge for 1-4 hours.", "Prep. Let steak sit out on the counter for 30 minutes and preheat a grill to high. Lightly oil the grate.", "Grill. Shake excess marinade from the steak and grill for 5 minutes on 1 side and then 1-3 minutes on the other.", "Rest. Transfer the steak to a cutting board and let rest for 10 minutes. Slice thinly against the grain.", "Warm the tortillas. Just throw them on the grill for a few seconds.", "Assemble. Fill the tortillas with the steak, salsa verde, and toppings."
+    ] },
 
     {
-    "id": 1,
-    "title": "Classic Margherita Pizza",
+    "id": 11,
+    "title": "Kitfo",
     "summary": "A simple pizza recipe with a rich tomato sauce, fresh mozzarella, and basil leaves.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/ooioCJV.jpeg",
+    "ingredients":["Meat", "Butter", "sauce"]  },
     
   {
-    "id": 2,
-    "title": "Avocado Toast",
+    "id": 12,
+    "title": "Delicious Ethiopian food",
     "summary": "A quick and healthy snack made with fresh avocado, olive oil, and topped with seeds.",
-    "image": "https://via.placeholder.com/150"  }
+    "image": "https://i.imgur.com/Nr3JRYh.jpeg"  }
   
 ]  
 

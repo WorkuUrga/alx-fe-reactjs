@@ -3,70 +3,72 @@
     "id": 1,
     "title": "Classic Margherita Pizza",
     "summary": "A simple pizza recipe with a rich tomato sauce, fresh mozzarella, and basil leaves.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/6G72QeN.jpeg",
+    "ingredients": ["Homemade Pizza Dough", "Tomatoes", "Garlic", "Extra-Virgin Olive Oil"],
+    "instructions": ["Place a pizza stone in the oven. Preheat the oven to 500 degrees F, allowing the stone to get hot.", "Shape the pizza dough on a floured surface into an 8-inch round, making it 1/4-inch thick. Transfer it to a pizza peel lined with parchment paper. Reshape if necessary.", "Gently brush the dough with the olive oil, then evenly spread the marinara sauce on, leaving a 1-inch border around the edge. Sprinkle the garlic over the top. Top with the mozzarella slices and tomatoes, leaving space in between.", "Slide the parchment with the crust onto the heated stone. Bake for 8-10 minutes until crust is golden and cheese is melted and bubbly", "Remove from oven and sprinkle the basil over the top, along with 1-2 grinds of fresh black pepper.", "Cut into wedges and serve immediately."]},
   {
     "id": 2,
     "title": "Avocado Toast",
     "summary": "A quick and healthy snack made with fresh avocado, olive oil, and topped with seeds.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/vrc0NHn.jpeg"  },
   {
     "id": 3,
     "title": "Chicken Caesar Salad",
     "summary": "A fresh and crunchy Caesar salad topped with grilled chicken and a creamy dressing.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/ZpzBzN2.jpeg"  },
   {
     "id": 4,
     "title": "Chocolate Brownies",
     "summary": "Fudgy chocolate brownies with a rich and dense texture, perfect for dessert.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/o5VcnB2.jpeg"  },
   
   {
     "id": 5,
     "title": "Spaghetti Bolognese",
     "summary": "A traditional Italian dish with a savory meat sauce served over spaghetti.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/WoI7lWf.jpeg"  },
   
   {
     "id": 6,
     "title": "Vegetable Stir Fry",
     "summary": "A quick and healthy stir-fry with mixed vegetables, soy sauce, and sesame oil.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/liwRKZU.jpeg"  },
   
   {
     "id": 7,
     "title": "Pancakes with Maple Syrup",
     "summary": "Fluffy pancakes served with rich maple syrup, perfect for a hearty breakfast.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/oMUnA9u.jpeg"  },
 
   {
     "id": 8,
     "title": "Greek Salad",
     "summary": "A refreshing salad with tomatoes, cucumber, olives, feta cheese, and olive oil.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/jQWgOIh.jpeg"  },
   
   {
     "id": 9,
     "title": "Lemon Drizzle Cake",
     "summary": "A light and zesty lemon cake with a sweet and tangy drizzle on top.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/HztwRta.jpeg"  },
   
   {
     "id": 10,
     "title": "Tacos with Guacamole",
     "summary": "Soft tacos filled with seasoned beef, fresh guacamole, salsa, and cheese.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/tdR5ST5.jpeg"  },
 
     {
     "id": 1,
-    "title": "Classic Margherita Pizza",
+    "title": "Kitfo",
     "summary": "A simple pizza recipe with a rich tomato sauce, fresh mozzarella, and basil leaves.",
-    "image": "https://via.placeholder.com/150"  },
+    "image": "https://i.imgur.com/ooioCJV.jpeg"  },
     
   {
     "id": 2,
-    "title": "Avocado Toast",
+    "title": "Delicious Ethiopian food",
     "summary": "A quick and healthy snack made with fresh avocado, olive oil, and topped with seeds.",
-    "image": "https://via.placeholder.com/150"  }
+    "image": "https://i.imgur.com/Nr3JRYh.jpeg"  }
   
 ]  
 
