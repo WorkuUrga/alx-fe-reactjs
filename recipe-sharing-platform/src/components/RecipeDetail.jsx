@@ -29,7 +29,7 @@ function RecipeDetail() {
     <div className='container'>
         <h1 className='font-bold mb-6 text-2xl'>{recipe.title}</h1>
         <img src={recipe.image} alt={recipe.title} 
-          className='xs:h-40 xs:w-40 mb-2 lg:h-96 lg:w-96 rounded-3xl mr-auto ml-auto hover:scale-105 sm:w-56 sm:h-56'
+          className='xs:h-40 xs:w-40 mb-2 lg:h-96 lg:w-96 rounded-3xl mr-auto ml-auto hover:scale-105 hover:shadow-md sm:w-56 sm:h-56'
         />
         <div>
           <p className='max-w-80 mr-auto ml-auto mb-8'>{recipe.summary}</p>
