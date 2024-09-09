@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Margherita Pizza",
+    "summary": "A simple pizza recipe with a rich tomato sauce, fresh mozzarella, and basil leaves.",
+    "image": "https://via.placeholder.com/150"  },
+  {
+    "id": 2,
+    "title": "Avocado Toast",
+    "summary": "A quick and healthy snack made with fresh avocado, olive oil, and topped with seeds.",
+    "image": "https://via.placeholder.com/150"  },
+  {
+    "id": 3,
+    "title": "Chicken Caesar Salad",
+    "summary": "A fresh and crunchy Caesar salad topped with grilled chicken and a creamy dressing.",
+    "image": "https://via.placeholder.com/150"  },
+  {
+    "id": 4,
+    "title": "Chocolate Brownies",
+    "summary": "Fudgy chocolate brownies with a rich and dense texture, perfect for dessert.",
+    "image": "https://via.placeholder.com/150"  },
+  
+  {
+    "id": 5,
+    "title": "Spaghetti Bolognese",
+    "summary": "A traditional Italian dish with a savory meat sauce served over spaghetti.",
+    "image": "https://via.placeholder.com/150"  },
+  
+  {
+    "id": 6,
+    "title": "Vegetable Stir Fry",
+    "summary": "A quick and healthy stir-fry with mixed vegetables, soy sauce, and sesame oil.",
+    "image": "https://via.placeholder.com/150"  },
+  
+  {
+    "id": 7,
+    "title": "Pancakes with Maple Syrup",
+    "summary": "Fluffy pancakes served with rich maple syrup, perfect for a hearty breakfast.",
+    "image": "https://via.placeholder.com/150"  },
+
+  {
+    "id": 8,
+    "title": "Greek Salad",
+    "summary": "A refreshing salad with tomatoes, cucumber, olives, feta cheese, and olive oil.",
+    "image": "https://via.placeholder.com/150"  },
+  
+  {
+    "id": 9,
+    "title": "Lemon Drizzle Cake",
+    "summary": "A light and zesty lemon cake with a sweet and tangy drizzle on top.",
+    "image": "https://via.placeholder.com/150"  },
+  
+  {
+    "id": 10,
+    "title": "Tacos with Guacamole",
+    "summary": "Soft tacos filled with seasoned beef, fresh guacamole, salsa, and cheese.",
+    "image": "https://via.placeholder.com/150"  },
+
+    {
+    "id": 1,
+    "title": "Classic Margherita Pizza",
+    "summary": "A simple pizza recipe with a rich tomato sauce, fresh mozzarella, and basil leaves.",
+    "image": "https://via.placeholder.com/150"  },
+    
+  {
+    "id": 2,
+    "title": "Avocado Toast",
+    "summary": "A quick and healthy snack made with fresh avocado, olive oil, and topped with seeds.",
+    "image": "https://via.placeholder.com/150"  }
+  
+]  
+
