@@ -30,7 +30,7 @@ function AddRecipeForm() {
   }
 
   return (
-    <div className='container bg-blue-100 w-3/4 mr-auto ml-auto'>
+    <div className='container bg-blue-100 w-3/4 mr-auto ml-auto rounded-3xl'>
       <h1 className='text-3xl font-bold text-center pt-4 pb-4'>Add new Recipe</h1>
     <form onSubmit = {handleSubmit} className='rounded-3xl flex flex-col gap-2'>
         <label>Recipe Title:</label>
@@ -38,7 +38,7 @@ function AddRecipeForm() {
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        className="focus:outline-none focus:ring-2 pl-4"
+        className="focus:outline-none focus:ring-2 pl-4 md:w-5/6 hover:shadow-lg sm:w-5/6"
       />
       {errors.title && (
         <p className='err'>{errors.title}</p>
@@ -49,7 +49,7 @@ function AddRecipeForm() {
         type="text"
         value = {summary} 
         onChange={(e) =>setSummary(e.target.value)}
-        className='focus:outline-none focus:ring-2 pl-2 pt-1'
+        className='focus:outline-none focus:ring-2 pl-2 pt-1 md:w-5/6 hover:shadow-lg sm:w-5/6'
       />
       {errors.summary && 
       <p className='err'>{errors.summary}</p>}
@@ -59,7 +59,7 @@ function AddRecipeForm() {
         type="text"
         value={ingredients}
         onChange={(e) =>setIngredients(e.target.value)}
-        className='focus:outline-none focus:ring-2 pl-2 pt-1'
+        className='focus:outline-none focus:ring-2 pl-2 pt-1 md:w-5/6 hover:shadow-lg sm:w-5/6'
       />
       {errors.ingredients && 
       <p className='err'>{errors.ingredients}</p>}
@@ -69,11 +69,11 @@ function AddRecipeForm() {
         type="text"
         value={steps}
         onChange={(e) => setSteps(e.target.value)}
-       className='focus:outline-none focus:ring-2 pl-2 pt-1'
+       className='focus:outline-none focus:ring-2 pl-2 pt-1 md:w-5/6 hover:shadow-lg sm:w-5/6'
       />
       {errors.steps &&
       <p className='err'>{errors.steps}</p>}
-      <button className='py-4 bg-blue-200 w-1/2 mr-auto ml-auto rounded-xl mb-4 hover:scale-95 active:bg-blue-500' type="submit">Submit Recipe</button>
+      <button className='mt-2 py-4 bg-blue-200 w-1/2 mr-auto ml-auto rounded-xl mb-4 hover:scale-95 active:bg-blue-500' type="submit">Submit Recipe</button>
     </form>
     </div>
   )

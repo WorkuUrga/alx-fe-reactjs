@@ -26,19 +26,19 @@ function RecipeDetail() {
       return <p>Loading...</p>
     }
   return (
-    <div className='container bg-green-100 mt-0 mb-4'>
-        <h1 className='font-bold mb-6 pt-4 text-2xl'>{recipe.title}</h1>
+    <div className='container bg-green-100 mt-0 mb-4 rounded-3xl'>
+        <h1 className=' font-bold mb-6 pt-4 text-2xl'>{recipe.title}</h1>
         <img src={recipe.image} alt={recipe.title} 
           className='xs:h-40 xs:w-40 mb-2 lg:h-96 lg:w-96 rounded-3xl mr-auto ml-auto hover:scale-105 hover:shadow-md sm:w-56 sm:h-56'
         />
         <div>
-          <p className='max-w-80 mr-auto ml-auto mb-8'>{recipe.summary}</p>
+          <p className='md:text-sm max-w-80 mr-auto ml-auto mb-8'>{recipe.summary}</p>
         </div>
         {recipe.ingredients && (
           <div className='text-center mb-10'>
             <h2 className='font-semibold mb-2'>Ingredients</h2>
             <ul className='list-disc pb-4'>{recipe.ingredients.map((ingredient, index) =>(
-              <li key={index}className='mr-auto ml-auto mb-2 w-40 text-left'>{ingredient}</li>
+              <li key={index}className='mr-auto ml-auto mb-2 w-40 text-left md:text-sm'>{ingredient}</li>
             ))}
             </ul>
           </div>
@@ -47,7 +47,7 @@ function RecipeDetail() {
           <div>
             <h2 className='mb-2 font-semibold'>Instructions</h2>
             <ol className='list-decimal text-left'> {recipe.instructions.map((instruction, index) => (
-              <li key={index} className='mr-auto ml-auto mb-2 w-1/2 xs:w-full lg:w-3/4'>{instruction}</li>
+              <li key={index} className='md:text-sm b-2 md:ml-10 mr-auto ml-auto mb-2 w-1/2 xs:w-full lg:w-3/4'>{instruction}</li>
             ))}</ol>
           </div>
         )}
