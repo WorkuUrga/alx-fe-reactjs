@@ -26,8 +26,8 @@ function RecipeDetail() {
       return <p>Loading...</p>
     }
   return (
-    <div className='container'>
-        <h1 className='font-bold mb-6 text-2xl'>{recipe.title}</h1>
+    <div className='container bg-green-100 mt-0 mb-4'>
+        <h1 className='font-bold mb-6 pt-4 text-2xl'>{recipe.title}</h1>
         <img src={recipe.image} alt={recipe.title} 
           className='xs:h-40 xs:w-40 mb-2 lg:h-96 lg:w-96 rounded-3xl mr-auto ml-auto hover:scale-105 hover:shadow-md sm:w-56 sm:h-56'
         />
@@ -37,7 +37,7 @@ function RecipeDetail() {
         {recipe.ingredients && (
           <div className='text-center mb-10'>
             <h2 className='font-semibold mb-2'>Ingredients</h2>
-            <ul className='list-disc'>{recipe.ingredients.map((ingredient, index) =>(
+            <ul className='list-disc pb-4'>{recipe.ingredients.map((ingredient, index) =>(
               <li key={index}className='mr-auto ml-auto mb-2 w-40 text-left'>{ingredient}</li>
             ))}
             </ul>
