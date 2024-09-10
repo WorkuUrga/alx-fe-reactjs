@@ -6,26 +6,26 @@ function AddRecipeForm() {
   const [summary, setSummary] = useState('')
   const [ingredients, setIngredients] = useState('')
   const [steps, setSteps] = useState('')
-  const [error, setError] = useState({})
+  const [errors, setErrors] = useState({})
 
   const validateLogic = ()=> {
-    const errors = {}
-    if(!title) errors.title = "Enter the title"
-    if(!summary) errors.summary = "Enter the summary fot the recipe"
-    if(!ingredients) errors.ingredients = "Enter ingredients"
-    if(ingredients.split('\n').length < 2) errors.ingredients = "At least two ingredients are required";
-    if(!steps) errors.steps = "Enter the Instructions"
-    return errors;
+    const err = {}
+    if(!title) err.title = "Enter the title"
+    if(!summary) err.summary = "Enter the summary fot the recipe"
+    if(!ingredients) err.ingredients = "Enter ingredients"
+    if(ingredients.split('\n').length < 2) err.ingredients = "At least two ingredients are required";
+    if(!steps) err.steps = "Enter the Instructions"
+    return err;
   }
 
   const handleSubmit = (e) =>{
     e.preventDefault();
     const validateErrors = validateLogic()
     if(Object.keys(validateErrors).length > 0) {
-      setError(validateErrors)
+      setErrors(validateErrors)
     }else {
       console.log({title, summary, ingredients, steps})
-      setError({})
+      setErrors({})
     }
   }
 
@@ -40,8 +40,8 @@ function AddRecipeForm() {
         onChange={(e) => setTitle(e.target.value)}
         className="focus:outline-none focus:ring-2 pl-4"
       />
-      {error.title && (
-        <p className='err'>{error.title}</p>
+      {errors.title && (
+        <p className='err'>{errors.title}</p>
       )}
 
       <label className=''>Recipe Summary:</label>
@@ -51,8 +51,8 @@ function AddRecipeForm() {
         onChange={(e) =>setSummary(e.target.value)}
         className='focus:outline-none focus:ring-2 pl-2 pt-1'
       />
-      {error.summary && 
-      <p className='err'>{error.summary}</p>}
+      {errors.summary && 
+      <p className='err'>{errors.summary}</p>}
 
       <label>Recipe Ingredients:</label>
       <textarea
@@ -61,8 +61,8 @@ function AddRecipeForm() {
         onChange={(e) =>setIngredients(e.target.value)}
         className='focus:outline-none focus:ring-2 pl-2 pt-1'
       />
-      {error.ingredients && 
-      <p className='err'>{error.ingredients}</p>}
+      {errors.ingredients && 
+      <p className='err'>{errors.ingredients}</p>}
 
       <label>Recipe Instructions:</label>
       <textarea
@@ -71,8 +71,8 @@ function AddRecipeForm() {
         onChange={(e) => setSteps(e.target.value)}
        className='focus:outline-none focus:ring-2 pl-2 pt-1'
       />
-      {error.steps &&
-      <p className='err'>{error.steps}</p>}
+      {errors.steps &&
+      <p className='err'>{errors.steps}</p>}
       <button className='py-4 bg-blue-200 w-1/2 mr-auto ml-auto rounded-xl mb-4 hover:scale-95 active:bg-blue-500' type="submit">Submit Recipe</button>
     </form>
     </div>
