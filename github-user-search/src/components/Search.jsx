@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import axios from 'axios'
+import fetchUserData from '../services/githubService'
 
 function Search() {
   const [search, setSearch] = useState('')
@@ -15,18 +15,12 @@ function Search() {
   setLoading(true);
   setError('');
   setUser(null);
-  
-  try {
-    const response = await axios.get(`https://api.github.com/users/${search}`)
-    setUser(response.data);
-  }
-  catch(err) {
-    setError("Looks like we cant find the user")
-  }
-  finally {
+
+  const {user, error} = await fetchUserData(search)
+    setUser(user)
+    setError(error)
     setLoading(false)
-  }
-}
+  };
   return (
     <div>
     <form onSubmit={handleSubmit}>
