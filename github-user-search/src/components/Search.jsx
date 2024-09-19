@@ -11,9 +11,7 @@ function Search() {
   const handleSubmit = async(e) =>{
   e.preventDefault();
 
-  if(!search.trim()) {
-    return;
-  }
+
   setLoading(true);
   setError('');
   setUser(null);
@@ -46,7 +44,7 @@ function Search() {
     {error && <p>{error}</p>}
     {user && (
       <div>
-        <img src={user.avatar_url} alt={user.name} width="150" />
+        <img src={user.avatar_url} alt={user.login} width="150" />
         <h2>{user.name || 'No name provided'}</h2>
         <p>
           <a href={user.html_url} target="_blank" rel="noopener noreferrer">Visit GitHub Profile</a>
