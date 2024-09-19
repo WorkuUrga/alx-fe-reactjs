@@ -1,13 +1,17 @@
 import axios from "axios";
 
-const GITHUB_API_URL = "https://api.github.com/users";
+const GITHUB_SEARCH_API_URL = "https://api.github.com/users";
 
-const fetchUserData = async (username) => {
+const fetchUserData = async (queryParams) => {
   try {
-    const response = await axios.get(`${GITHUB_API_URL}/${username}`);
-    return { user: response.data, error: null }; // Return user data
+    const query = Object.entries(queryParams)
+      .map(([key, value]) => `${key}:${value}`)
+      .join("+");
+
+    const response = await axios.get(`${GITHUB_SEARCH_API_URL}?q=${query}`);
+    return { user: response.data, error: null };
   } catch (error) {
-    return { user: null, error: "Looks like we can't find the user" }; // Return error if something goes wrong
+    return { user: null, error: "Looks like we can't find the user" };
   }
 };
 
