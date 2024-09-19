@@ -23,7 +23,7 @@ function Search() {
     setUser(response.data);
   }
   catch(err) {
-    setError("We can't find a user")
+    setError("Looks like we cant find the user")
   }
   finally {
     setLoading(false)
