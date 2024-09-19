@@ -30,7 +30,7 @@ function AddRecipeForm() {
   }
 
   return (
-    <div className='container bg-blue-100 w-3/4 mr-auto ml-auto rounded-3xl'>
+    <div className='container bg-green-100 w-3/4 mr-auto ml-auto rounded-3xl'>
       <h1 className='text-3xl font-bold text-center pt-4 pb-4'>Add new Recipe</h1>
     <form onSubmit = {handleSubmit} className='rounded-3xl flex flex-col gap-2'>
         <label>Recipe Title:</label>
