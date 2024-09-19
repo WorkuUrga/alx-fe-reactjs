@@ -14,10 +14,15 @@ function Search() {
     setError('');
     setUser(null);
 
+    try {
     const { user, error } = await fetchUserData(search);
     setUser(user);
     setError(error);
     setLoading(false);
+    }
+    catch {
+      setError("Looks like we cant find the user")
+    }
   };
 
   return (
