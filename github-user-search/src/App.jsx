@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import UserSearch from './components/UserSearch'
 import './App.css'
 
