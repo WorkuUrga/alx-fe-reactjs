@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className=''>
+    <div className='app'>
       <h1>Github User Search</h1>
       <Search />
     </div>
