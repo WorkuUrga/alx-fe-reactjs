@@ -1,32 +1,28 @@
 import React, { useState } from 'react';
-import fetchUserData from '../services/githubService';
+import { fetchUserData } from '../services/githubService';
 
 function Search() {
   const [search, setSearch] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [users, setUsers] = useState([]); // Set users as an array to handle multiple results
-  const [error, setError] = useState('');
   const [location, setLocation] = useState('');
   const [minRepos, setMinRepos] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState('');
+  const [page] = useState(1); // Fixed page for now
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setLoading(true);
     setError('');
-    setUsers([]); // Reset the users array before making a new request
+    setUsers([]);
 
     try {
-      // Pass query parameters to fetchUserData function
-      const queryParams = {
-        username: search,
-        location: location,
-        repos: `>${minRepos}`,
-      };
-
-      const { users, error } = await fetchUserData(queryParams);
-      setUsers(users); // Update the users state with fetched users
-      setError(error);
+      const fetchedUsers = await fetchUserData(search, location, minRepos, page);
+      if (fetchedUsers.length === 0) {
+        setError('No users found matching the criteria.');
+      } else {
+        setUsers(fetchedUsers);
+      }
     } catch (err) {
       setError('Looks like we can’t find the user.');
     } finally {
@@ -49,7 +45,7 @@ function Search() {
           type="text"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          placeholder="Enter the location"
+          placeholder="Enter location"
         />
         <input
           className="mt-2 block mr-auto ml-auto h-8 w-2/3 border border-gray-400"
@@ -78,7 +74,7 @@ function Search() {
                 width="150"
                 className="mr-auto ml-auto"
               />
-              <h2 className="">{user.login || 'No username provided'}</h2>
+              <h2 className="">{user.login}</h2>
               <p>
                 <a
                   href={user.html_url}
